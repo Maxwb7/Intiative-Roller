@@ -1,0 +1,28 @@
+#Small bit of code that takes items in list, adds a number to the INIMod variable, and then prints each instance in order
+
+import random
+import math
+
+playerName = input("input player's name")
+characterName = input("input character's name.")
+iniMod = int(input("enter initiative modifier here."))
+init = iniMod + random.randint(1,20)
+
+
+class Pc:
+    def __init__ (self,playerName,characterName,iniMod,init):
+        self.playerName = playerName
+        self.characterName = characterName
+        self.iniMod = iniMod
+        self.init = init
+        
+class Npc:
+    def __init__ (self,npcName,npcMod,initiativeNPC):
+        self.npcName = npcName
+        self.npcMod = npcMod
+        self.init = initiativeNPC
+
+pc1 = Pc(playerName, characterName,iniMod,init)
+
+print (pc1.playerName, pc1.characterName, pc1.iniMod,pc1.init)
+#this is the first bit. I actually got it working, but now I need to get the multiple instances in a list and organize them.
